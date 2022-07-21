@@ -9,6 +9,8 @@ export { default as PostService } from './services/Post.service'
 export { default as generateQueryString } from './utils/generateQueryString'
 export { default as getEditorDescription } from './utils/getEditorDescription'
 
+export * from './@types'
+
 export default {
   services,
   utils,
