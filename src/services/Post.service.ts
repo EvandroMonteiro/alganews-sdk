@@ -10,7 +10,7 @@ class PostService extends Service {
       .then(this.getData)
   }
 
-  static getExistingPosts(id: number): Promise<Post.Detailed> {
+  static getExistingPost(id: number): Promise<Post.Detailed> {
     return this.Http
       .get<Post.Detailed>(`/posts/${id}`)
       .then(this.getData)
