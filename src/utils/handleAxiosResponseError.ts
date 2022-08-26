@@ -18,6 +18,7 @@ export default function handleAxiosResponseError(
   const { response } = error;
 
   if (response?.data.type) {
+    console.log("sdk response", response);
     const { type } = response.data;
     const { data } = response;
 
