@@ -1,23 +1,23 @@
-import axios, { AxiosInstance, AxiosResponse } from "axios"
-import handleAxiosResponseError from "./utils/handleAxiosResponseError"
-import handleAxiosResponseSuccess from "./utils/handleAxiosResponseSuccess"
+import axios, { AxiosResponse } from "axios";
+import handleAxiosResponseError from "./utils/handleAxiosResponseError";
+import handleAxiosResponseSuccess from "./utils/handleAxiosResponseSuccess";
 
-const Http: AxiosInstance = axios.create()
+const Http = axios.create();
 
 class Service {
-  protected static Http: AxiosInstance = Http
-  protected static getData: <T>(res: AxiosResponse<T, any>) => T = getData
+  protected static Http = Http;
+  protected static getData = getData;
 }
 
-function getData<T>(res: AxiosResponse<T>): T {
-  return res.data
+function getData<T>(res: AxiosResponse<T>) {
+  return res.data;
 }
 
-Http.defaults.baseURL = "http://localhost:8080"
+Http.defaults.baseURL = "http://localhost:8080";
 
 Http.interceptors.response.use(
   handleAxiosResponseSuccess,
   handleAxiosResponseError
-)
+);
 
-export default Service
+export default Service;
