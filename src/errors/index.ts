@@ -11,6 +11,7 @@ export const ERRORS = {
 
 export { default as ForbiddenError } from "./Forbidden.error";
 export { default as InvalidDataError } from "./InvalidData.error";
+export { default as InvalidParameterError } from "./InvalidParameter.error";
 export { default as SystemError } from "./System.error";
 export { default as ResourceNotFoundError } from "./ResourceNotFound.error";
 export { default as BusinessError } from "./Business.error";

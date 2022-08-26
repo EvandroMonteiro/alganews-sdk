@@ -1,25 +1,26 @@
-import { AlgaNews } from "./@types"
+import { AlgaNews } from "./@types";
 
-export type ErrorData = AlgaNews.components['schemas']['Problem']
+export type ErrorData = AlgaNews.components["schemas"]["Problem"];
 
 export type ErrorType =
-  | 'ForbiddenError'
-  | 'SystemError'
-  | 'InvalidDataError'
-  | 'ResourceNotFoundError'
-  | 'BusinessError'
-  | 'GenericError'
+  | "ForbiddenError"
+  | "SystemError"
+  | "InvalidDataError"
+  | "ResourceNotFoundError"
+  | "BusinessError"
+  | "GenericError"
+  | "IncomprehensibleMessageError";
 
 class CustomError {
-  static type: ErrorType
+  static type: ErrorType;
 
-  message?: string
-  data?: ErrorData
+  message?: string;
+  data?: ErrorData;
 
   constructor(data: ErrorData) {
-    this.message = data.userMessage || data.detail
-    this.data = data
+    this.message = data.userMessage || data.detail;
+    this.data = data;
   }
 }
 
-export default CustomError
+export default CustomError;
