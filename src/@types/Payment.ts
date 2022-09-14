@@ -12,7 +12,7 @@ export namespace Payment {
   export type Query = {
     payeeId?: number;
     payeeEmail?: number;
-    scheduledToMonth?: string;
+    scheduledToYearMonth?: string;
     page?: number;
     size?: number;
     sort: [keyof Summary, 'asc' | 'desc'];
