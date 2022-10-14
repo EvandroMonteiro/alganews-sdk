@@ -23,7 +23,7 @@ class MetricService extends Service {
         },
       }
     )
-      .then(this.getData)
+      .then((res) => res)
       .catch((err) => {
         console.log(err);
         return err;
