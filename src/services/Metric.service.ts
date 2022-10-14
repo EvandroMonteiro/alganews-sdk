@@ -24,7 +24,10 @@ class MetricService extends Service {
       }
     )
       .then(this.getData)
-      .catch((err) => err);
+      .catch((err) => {
+        console.log(err);
+        return err;
+      });
   }
 
   static getMonthlyRevenueExpensesChartJs(): Promise<Metric.MonthlyRevenuesExpenses> {
