@@ -22,12 +22,7 @@ class MetricService extends Service {
           "Content-Type": "application/json",
         },
       }
-    )
-      .then((res) => res)
-      .catch((err) => {
-        console.log(err);
-        return err;
-      });
+    ).then(this.getData);
   }
 
   static getMonthlyRevenueExpensesChartJs(): Promise<Metric.MonthlyRevenuesExpenses> {
