@@ -8,6 +8,10 @@ class Service {
   protected static Http = Http;
   protected static getData = getData;
 
+  public static setBaseURL(baseURL: string) {
+    this.Http.defaults.baseURL = baseURL;
+  }
+
   public static setRequestInterceptors(
     onFulfilled: (
       request: AxiosRequestConfig
